@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.025em;
+
+    scrollbar-width: 0.25rem;
+
+    @apply text-rose-50;
+}
+
+body {
+    @apply bg-black overflow-x-hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    @apply bg-rose-600;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-rose-300;
+}
+
+@layer utilities {
+    .fullscreen {
+        @apply w-[100dvw] h-[100dvh];
+    }
+
+    .fullsize {
+        @apply w-full h-full;
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .pretty-button {
+        @apply px-6 py-2 rounded-none bg-rose-600 hover:bg-rose-500 duration-300;
+    }
+
+    .zoom-button {
+        @apply h-10 w-10 p-1 border border-transparent hover:bg-rose-500 hover:border-rose-600 duration-300;
+    }
+}
